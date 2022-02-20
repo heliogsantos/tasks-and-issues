@@ -1,0 +1,28 @@
+nav {
+  width: 200px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #ffffff;
+  z-index: 3;
+  -webkit-box-shadow: 1px 2px 11px -6px rgba(0,0,0,0.37);
+  -moz-box-shadow: 1px 2px 11px -6px rgba(0,0,0,0.37);
+  box-shadow: 1px 2px 11px -6px rgba(0,0,0,0.37);
+  padding: 10px;
+  transition: .2s linear;
+
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    .close {
+      font-weight: 900;
+      cursor: pointer;
+    }
+  }
+}
+
+.showMenu {
+  left: -200px;
+}

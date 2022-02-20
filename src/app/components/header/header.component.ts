@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { MenuService } from '../menu/services/menu';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
-  constructor() { }
+  constructor(private menuService: MenuService) { }
 
-  ngOnInit(): void {
+  openMenu = () => {
+    const showMenu = true
+    this.menuService.setMenuToggle(showMenu)
   }
 
 }

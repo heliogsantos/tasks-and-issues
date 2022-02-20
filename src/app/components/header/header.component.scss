@@ -10,7 +10,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  z-index: 1;
+  background: #ffff;
   .title {
     text-align: center;
     h1 {
@@ -48,7 +49,7 @@ header {
     border-style: none;
     outline: none;
     cursor: pointer;
-    background-image: linear-gradient(90deg,#9b75e6, #654186);
+    background: #43a047 ;
     padding: 6px  20px;
     text-transform: uppercase;
     color: white;
