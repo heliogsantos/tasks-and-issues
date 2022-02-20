@@ -1,0 +1,56 @@
+header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 15px;
+  text-transform: uppercase;
+  -webkit-box-shadow: 2px 4px 21px -8px rgba(0,0,0,0.13); 
+  box-shadow: 2px 4px 21px -8px rgba(0,0,0,0.13);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .title {
+    text-align: center;
+    h1 {
+      font-size: 15px;
+      font-weight: 600;
+    }
+  }
+
+  .bars {
+    width: 20px;
+    height: 2px;
+    background: #000000;
+    border-radius: 10px;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    &::after, &::before {
+      content: '';
+      background: inherit;
+      height: inherit;
+      position: absolute;
+      top: -10px;
+      width: 25px;
+      border-radius: inherit;
+    }
+
+    &::after {
+      top: 10px;
+      width: 15px;
+    }
+  }
+
+  button {
+    border-style: none;
+    outline: none;
+    cursor: pointer;
+    background: #69f0ae;
+    padding: 6px  20px;
+    text-transform: uppercase;
+    border-radius: 4px;
+  }
+}
