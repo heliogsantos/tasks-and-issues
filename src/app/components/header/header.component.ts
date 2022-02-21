@@ -11,9 +11,9 @@ export class HeaderComponent {
 
   constructor(private menuService: MenuService) { }
 
-  openMenu = () => {
+  openMenu = (e: any) => {
     const showMenu = true
     this.menuService.setMenuToggle(showMenu)
+    e.stopPropagation()
   }
-
 }

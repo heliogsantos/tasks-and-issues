@@ -18,6 +18,8 @@ export class MenuComponent implements OnInit {
     this.menuService.setMenuToggle(this.showMenu)
   }
 
+  stopPropagationNavigation = (e: any) => e.stopPropagation()
+
   ngOnInit(): void {
     this.menuService.getMenuToggle().subscribe(props => {
       this.showMenu = props

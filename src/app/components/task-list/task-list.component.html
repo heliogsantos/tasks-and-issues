@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="wraper">
+    <ul>
+      <li [ngClass]="{'task-done': task.done}" (click)="doneTask(task)" *ngFor="let task of tasksList">
+        <span>[{{ task.done ? 'x' : '' }}]</span>{{task.label}}
+      </li>
+    </ul>
+  </div>
+</div>

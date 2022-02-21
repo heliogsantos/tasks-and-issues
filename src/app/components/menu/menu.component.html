@@ -1,6 +1,6 @@
-<nav [ngClass]="{'showMenu': !showMenu}">
+<nav [ngClass]="{'showMenu': !showMenu}" (click)="stopPropagationNavigation($event)">
   <div class="header">
+    <p>login</p>
     <div class="close" (click)="closeNaveBar()">X</div>
   </div>
-
 </nav>

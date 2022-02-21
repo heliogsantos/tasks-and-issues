@@ -15,7 +15,12 @@ nav {
   .header {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    p {
+      font-weight: 900;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
     .close {
       font-weight: 900;
       cursor: pointer;
