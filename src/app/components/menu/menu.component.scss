@@ -1,5 +1,5 @@
 nav {
-  width: 200px;
+  width: 260px;
   height: 100%;
   position: absolute;
   left: 0;
@@ -26,8 +26,60 @@ nav {
       cursor: pointer;
     }
   }
+
+  .navigation-wraper {
+    width: 100%;
+
+    ul {
+      padding-top: 20px;
+      .icon {
+        width: 20px;
+        height: 20px;
+        float: left;
+        img {
+          width: 100%;
+        }
+      }
+      
+      li {
+        text-transform: uppercase;
+        font-weight: 600;
+        cursor: pointer;
+        font-size: 12px;
+        padding-bottom: 15px;
+        list-style: none;
+        margin-left: 13px;
+        position: relative;
+        .sub-tasks {
+          animation: .2s linear;
+          display: none;
+          p {
+            padding: 5px;
+            text-transform: none;
+            color: rgb(70, 70, 70);
+            font-weight: lighter;
+          }
+        }
+        .show-sub-tasks {
+          display: block;
+        }
+
+        &::before {
+          content: '';
+          width: 7px;
+          height: 7px;
+          display: block;
+          background-color: #43a047;
+          border-radius: 100%;
+          position: absolute;
+          left: -12px;
+          top: 5px;
+        }
+      }
+    }
+  }
 }
 
 .showMenu {
-  left: -200px;
+  left: -100%;
 }
