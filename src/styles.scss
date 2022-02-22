@@ -13,3 +13,19 @@ body {
   height: 100%;
 }
 
+:root {
+  --primary:#43a047;
+  --danger:#b71c1c;
+}
+
+.bg-green-primary {
+  background: var(--primary);
+}
+
+.color-green-primary {
+  color: var(--primary);
+}
+
+.color-danger {
+  color: var(--danger);
+}

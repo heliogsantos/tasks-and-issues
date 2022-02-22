@@ -15,8 +15,48 @@
       li {
         display: flex;
         margin-bottom: 20px;
-        cursor: pointer;
         align-items: center;
+        cursor: pointer;
+        padding-left: 4px;
+        padding-bottom: 4px;
+        align-items: center;
+        div {
+          display: flex;
+          margin-right: 40px;
+          p {
+            padding-right: 10px;
+            padding-top: 5px;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 12px;
+            cursor: pointer;
+          }
+        }
+
+        .label {
+          font-weight: 500;
+          font-size: 16px;
+          text-transform: none;
+        } 
+        textarea {
+          border-style: none;
+          outline: none;
+          margin-left: 10px;
+          font-weight: 300;
+          border: none;
+          width: 100%;
+          border-bottom: 1px solid #c0c0c0;
+        } 
+        button {
+          color: white;
+          border-style: none;
+          padding: 5px 10px;
+          margin-left: 10px;
+          cursor: pointer;
+          position: relative;
+          top: 5px;
+          text-transform: none;
+        }     
       }
       li span {
         margin-right: 10px;
@@ -29,7 +69,7 @@
 
 .task-done {
   font-style: italic;
-  color: #43a047;
+  opacity: .2;
   text-decoration: line-through;
   font-size: 14px;
 }

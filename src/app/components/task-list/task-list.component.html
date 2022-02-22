@@ -1,11 +1,17 @@
 <div class="container">
   <div class="wraper">
-    <h2><span></span>Banco Safra</h2>
+    <h2>Banco Safra</h2>
     <ul>
-      <li [ngClass]="{'task-done': task.done}" (click)="doneTask(task)" *ngFor="let task of tasksList">
-        <span>[{{ task.done ? 'x' : '' }}]</span>{{task.label}}
+      <li *ngFor="let task of tasksList">
+        <div>
+          <p (click)="editTask(task)" class="color-green-primary">Edit</p>
+          <p class="color-danger">Delete</p>
+        </div>
+        <span *ngIf="!task.editing" (click)="doneTask(task)" [ngClass]="{'task-done': task.done}">[{{ task.done ? 'x' : '' }}]</span>
+        <p *ngIf="!task.editing" (click)="doneTask(task)" [ngClass]="{'task-done': task.done}" class="label">{{task.label}}</p>
+        <textarea *ngIf="task.editing" type="text" [value]="task.label"></textarea>
+        <button class="bg-green-primary" *ngIf="task.editing">DONE</button>
       </li>
     </ul>
   </div>
 </div>
-z
