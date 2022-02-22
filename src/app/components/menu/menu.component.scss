@@ -64,6 +64,11 @@ nav {
           display: block;
         }
 
+        span {
+          font-size: 10px;
+          font-weight: 900;
+        }
+
         &::before {
           content: '';
           width: 7px;

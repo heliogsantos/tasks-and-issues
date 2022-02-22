@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 interface TaskList {
   label: string;
   done: boolean;
+  folderName: string;
 }
 
 @Component({
@@ -17,35 +18,43 @@ export class TaskListComponent implements OnInit {
   tasksList: TaskList[] = [
     {
       label: 'Created module scmodule',
-      done: false
+      done: false,
+      folderName: 'Banco Safra'
     },
     {
       label: 'Created module scmodule',
-      done: true
+      done: false,
+      folderName: 'Banco Safra'
     },
     {
       label: 'Created module scmodule',
-      done: false
+      done: false,
+      folderName: 'Banco Safra'
     },
     {
       label: 'Created module Dicta velit suscipit, fugit, illum possimus',
-      done: false
+      done: false,
+      folderName: 'Banco Safra'
     },
     {
       label: 'Created module scmodule',
-      done: false
+      done: false,
+      folderName: 'Banco Safra'
     },
     {
       label: 'Created module Dicta velit suscipit, fugit, illum possimus',
-      done: false
+      done: false,
+      folderName: 'Banco Safra'
     },
     {
       label: 'Created module scmodule',
-      done: false
+      done: false,
+      folderName: 'Banco Safra'
     },
     {
       label: 'Created module scmodule',
-      done: false
+      done: false,
+      folderName: 'Banco Safra'
     },
   ]
 

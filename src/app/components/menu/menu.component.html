@@ -9,6 +9,7 @@
 
       <li *ngFor="let task of tasks" (click)="openSubTasks(task)">
         {{task.title}}
+        <span>({{task.isseus.length}})</span>
         <div *ngFor="let issue of task.isseus" class="sub-tasks" [ngClass]="{'show-sub-tasks': task.open}">
           <p>{{issue}}</p>
         </div>

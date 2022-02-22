@@ -25,11 +25,11 @@ export class MenuComponent implements OnInit {
       open: false
     },{
       title: 'Projeto To-Do',
-      isseus: ['Created module scmodule', 'Created module', 'Created module scmodule'],
+      isseus: ['Created module scmodule', 'Created module scmodule', 'Created module scmodule', 'Created module scmodule', 'Created module scmodule', 'Created module scmodule', 'Created module scmodule'],
       open: false
     },{
       title: 'Melhorias Projeto Previdencia',
-      isseus: ['Created module scmodule', 'Created module', 'Created module scmodule'],
+      isseus: ['Created module scmodule'],
       open: false
     }
   ]
