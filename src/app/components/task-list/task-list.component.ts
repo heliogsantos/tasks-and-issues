@@ -82,6 +82,9 @@ export class TaskListComponent implements OnInit {
   renderWidthNewTaskItem = () => {
     const initialWidth = 5
     const widthFinal = initialWidth + this.newTaskItem.length / 2
+
+    if(widthFinal > 70) return
+    
     return widthFinal
   }
 

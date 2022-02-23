@@ -24,6 +24,8 @@
         padding: 0 0 0 10px;
         max-width: 70%;
         min-width: 10%;
+        position: relative;
+        top: 3px;
       }
       button {
         color: white;
@@ -31,7 +33,13 @@
         padding: 4px 10px;
         cursor: pointer;
         font-size: 12px;
+        transition: .3s linear;
         margin-left: 20px;
+
+        &:disabled {
+          background: #999999;
+          transition: .3s linear;
+        }
       } 
       h2 {
         font-weight: 800;

@@ -3,7 +3,7 @@
     <div class="title">
       <h2>Banco Safra</h2>
       <input [(ngModel)]="newTaskItem"  [style.width]="renderWidthNewTaskItem() + '%'" placeholder="Add new item">
-      <button class="bg-green-primary">ADD ITEM</button>
+      <button [disabled]="!newTaskItem.length || newTaskItem.length < 5" class="bg-green-primary">ADD ITEM</button>
     </div>
     <ul>
       <li *ngFor="let task of tasksList">
