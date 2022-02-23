@@ -16,6 +16,8 @@ export class TaskListComponent implements OnInit {
 
   constructor() { }
 
+  newTaskItem = '';
+
   showInputEditTask = ''
 
   tasksList: TaskList[] = [
@@ -76,6 +78,12 @@ export class TaskListComponent implements OnInit {
   editTask = (task: TaskList) => {
     task.editing = !task.editing
   } 
+
+  renderWidthNewTaskItem = () => {
+    const initialWidth = 5
+    const widthFinal = initialWidth + this.newTaskItem.length / 2
+    return widthFinal
+  }
 
   ngOnInit(): void {
   }
