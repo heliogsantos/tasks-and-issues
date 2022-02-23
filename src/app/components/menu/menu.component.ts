@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+
+import { DarkModeService } from 'src/app/services/dark-mode/dark-mode.service';
 import { MenuService } from './services/menu';
 
 interface Task {
@@ -14,7 +16,10 @@ interface Task {
 })
 export class MenuComponent implements OnInit {
 
-  constructor(private menuService: MenuService) { }
+  constructor(
+    private menuService: MenuService,
+    private darkMode: DarkModeService
+  ) { }
 
   showMenu = false
 
@@ -33,6 +38,8 @@ export class MenuComponent implements OnInit {
       open: false
     }
   ]
+
+  asDarkMode = false
 
   closeNaveBar = () => {
     this.showMenu = !this.showMenu
@@ -57,6 +64,8 @@ export class MenuComponent implements OnInit {
     this.menuService.getMenuToggle().subscribe(props => {
       this.showMenu = props
     })
+    
+    this.darkMode.getDarkModde().subscribe(props => this.asDarkMode = props)
   }
 
 }

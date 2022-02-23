@@ -35,7 +35,29 @@ header {
       border-radius: 10px;
     }
   }
-
+  .dark-bars {
+    span {
+      background: rgb(105, 105, 105);
+    }
+  }
+  .add-task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .dark-mode-warper {
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+      margin-right: 10px;
+      background: white;
+      border-radius: 100%;
+      padding: 4px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
   button {
     border-style: none;
     outline: none;
@@ -48,6 +70,9 @@ header {
 
   @media screen and (max-width: 768px) {
     button {
+      display: none;
+    }
+    .dark-mode {
       display: none;
     }
   }

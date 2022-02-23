@@ -1,5 +1,5 @@
-<header>
-  <div class="bars" (click)="openMenu($event)">
+<header [ngClass]="{'dark-mode-primary': asDarkMode}">
+  <div [ngClass]="{'dark-bars': asDarkMode}" class="bars" (click)="openMenu($event)">
     <span></span>
     <span></span>
     <span></span>
@@ -8,6 +8,9 @@
     <h1>Tasks and issues</h1>
   </div>
   <div class="add-task">
+    <div class="dark-mode-warper" (click)="handleDarkMode()">
+      <img src="../../.././assets/icones/dark-mode-black.png" alt="Deixar tema escuro ou claro">
+    </div>
     <button class="bg-green-primary">new task</button>
   </div>
 </header>

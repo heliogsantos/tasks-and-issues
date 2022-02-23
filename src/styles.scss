@@ -18,6 +18,10 @@ body {
   --danger:#b71c1c;
 }
 
+@mixin transitionDarkMode {
+  transition: .2s linear;
+}
+
 .bg-green-primary {
   background: var(--primary);
 }
@@ -28,4 +32,15 @@ body {
 
 .color-danger {
   color: var(--danger);
+}
+
+.dark-mode {
+  background: #353535 !important;
+  @include transitionDarkMode;
+}
+
+.dark-mode-primary {
+  background: #272727 !important;
+  color: rgb(112, 111, 111);
+  @include transitionDarkMode;
 }
