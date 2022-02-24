@@ -8,8 +8,8 @@
     <ul>
       <li *ngFor="let task of tasksList">
         <div>
-          <p (click)="editTask(task)" class="color-green-primary">Edit</p>
-          <p class="color-danger">Delete</p>
+          <button  [disabled]="task.done" (click)="editTask(task)">Edit</button>
+          <button>Delete</button>
         </div>
         <span *ngIf="!task.editing" (click)="doneTask(task)" [ngClass]="{'task-done': task.done}">[{{ task.done ? 'x' : '' }}]</span>
         <p *ngIf="!task.editing" (click)="doneTask(task)" [ngClass]="{'task-done': task.done}" class="label">{{task.label}}</p>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { MenuService } from '../menu/services/menu';
 import { DarkModeService } from 'src/app/services/dark-mode/dark-mode.service';
+import { ModalService } from 'src/app/services/modal/modal.service';
 
 
 @Component({
@@ -13,7 +14,8 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private menuService: MenuService,    
-    private darkMode: DarkModeService
+    private darkMode: DarkModeService,
+    private modal: ModalService
 
   ) { }
 
@@ -25,12 +27,18 @@ export class HeaderComponent implements OnInit {
     e.stopPropagation()
   }
 
-  handleDarkMode = () => {
+  handleDarkMode = (event: any) => {
     if(this.asDarkMode) {
       this.darkMode.setDarkMode(false)
     } else {
       this.darkMode.setDarkMode(true)
     } 
+    event.stopPropagation()
+  }
+
+  openModal = (event: any) => {
+    event.stopPropagation()
+    this.modal.setShowModal(true)
   }
 
   ngOnInit(): void {
