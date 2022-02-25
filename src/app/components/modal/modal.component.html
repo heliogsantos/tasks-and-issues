@@ -4,7 +4,16 @@
       <h3>Add new directory</h3>
       <span (click)="close()">X</span>
     </div>
-   <div class="modal-body"></div>
-   <div class="modal-footer"></div>
+   <div class="modal-body">
+     <form>
+      <input [(ngModel)]="directoryName" type="text" name="directory" placeholder="Name directory">
+      <input class="newTask" type="text" placeholder="Name task">
+      <button (click)="fillFields()" class="btn-primary">Add plus</button>
+      <input class="newTask" type="text" *ngFor="let task of newTasks">
+     </form>
+   </div>
+   <div class="modal-footer">
+     <button (click)="createNewDirectory()" class="btn-primary" [disabled]="!directoryName.length">Create</button>
+   </div>
   </div>
 </div>

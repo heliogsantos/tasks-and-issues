@@ -43,3 +43,26 @@ body {
   color: rgb(112, 111, 111);
   @include transitionDarkMode;
 }
+
+input[type="text"] {
+  border-style: none;
+  outline: none;
+  font-weight: 300;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #d8d8d8;
+  padding: 0 0 0 10px;
+}
+
+button.btn-primary {
+  background: var(--primary);
+  color: white;
+  border-style: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  cursor: pointer;
+  &:disabled {
+    background: #999999;
+    transition: .3s linear;
+   }
+}

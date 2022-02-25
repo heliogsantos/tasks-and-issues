@@ -8,11 +8,9 @@ export class ModalService {
 
   constructor() { }
 
-  protected openModal = new BehaviorSubject<boolean>(false)
+  protected openModal = new BehaviorSubject<boolean>(true)
 
-  setShowModal = (props: boolean) => {
-    this.openModal.next(props)
-  }
+  setShowModal = (props: boolean) => this.openModal.next(props)
 
   getModalValue = () => this.openModal.asObservable()
 }
