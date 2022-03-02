@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModalComponent } from './modal.component';
+import { CreateDirectoryComponent } from './create-directory.component';
 
-describe('ModalComponent', () => {
-  let component: ModalComponent;
-  let fixture: ComponentFixture<ModalComponent>;
+describe('CreateDirectoryComponent', () => {
+  let component: CreateDirectoryComponent;
+  let fixture: ComponentFixture<CreateDirectoryComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ModalComponent ]
+      declarations: [ CreateDirectoryComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ModalComponent);
+    fixture = TestBed.createComponent(CreateDirectoryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
