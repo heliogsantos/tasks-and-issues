@@ -1,16 +1,23 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
+import { DarkModeSaveService } from './dark-mode-save.service';
+
 @Injectable({
   providedIn: 'root'
 })
 export class DarkModeService {
 
-  constructor() { }
+  constructor(private darkModeSave: DarkModeSaveService) {}
 
-  darkMode = new BehaviorSubject<boolean>(false)
+  darkMode = new BehaviorSubject<boolean>(
+    this.darkModeSave.getDarkModeSave()
+  )
 
-  setDarkMode = (props: boolean) => this.darkMode.next(props)
+  setDarkMode = (props: boolean) => {
+    this.darkModeSave.setDarkModeSave(props)
+    this.darkMode.next(this.darkModeSave.getDarkModeSave())
+  }
 
-  getDarkModde = () => this.darkMode.asObservable()
+  getDarkMode = () => this.darkMode.asObservable()
 }
