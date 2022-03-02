@@ -24,49 +24,49 @@ export class TaskListComponent implements OnInit {
     {
       label: 'Created module scmodule',
       done: false,
-      folderName: 'Banco Safra',
+      folderName: 'Task and issues',
       editing: false
     },
     {
       label: 'Created module scmodule',
       done: false,
-      folderName: 'Banco Safra',
+      folderName: 'Task and issues',
       editing: false
     },
     {
       label: 'Created module scmodule',
       done: false,
-      folderName: 'Banco Safra',
+      folderName: 'Task and issues',
       editing: false
     },
     {
       label: 'Created module Dicta velit suscipit fugit illum possimus',
       done: false,
-      folderName: 'Banco Safra',
+      folderName: 'Task and issues',
       editing: false
     },
     {
       label: 'Created module scmodule',
       done: false,
-      folderName: 'Banco Safra',
+      folderName: 'Task and issues',
       editing: false
     },
     {
       label: 'Created module Dicta velit suscipit',
       done: false,
-      folderName: 'Banco Safra',
+      folderName: 'Task and issues',
       editing: false
     },
     {
       label: 'Created module scmodule',
       done: false,
-      folderName: 'Banco Safra',
+      folderName: 'Task and issues',
       editing: false
     },
     {
       label: 'Created module scmodule',
       done: false,
-      folderName: 'Banco Safra',
+      folderName: 'Task and issues',
       editing: false
     },
   ]

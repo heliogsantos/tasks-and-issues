@@ -25,7 +25,7 @@ export class MenuComponent implements OnInit {
 
   tasks: Task[] = [
     {
-      title: 'Banco Safra',
+      title: 'Task and issues',
       isseus: ['Created module scmodule', 'Created module', 'Created module scmodule'],
       open: false
     },{
