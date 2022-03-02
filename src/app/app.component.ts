@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.darkMode.getDarkModde().subscribe(props => this.asDarkMode = props)
+    this.darkMode.getDarkMode().subscribe(props => this.asDarkMode = props)
     this.modal.getModalValue().subscribe(props => this.addNewTask = props)
   }
 }

@@ -42,6 +42,6 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.darkMode.getDarkModde().subscribe(props => this.asDarkMode = props)
+    this.darkMode.getDarkMode().subscribe(props => this.asDarkMode = props)
   }
 }
