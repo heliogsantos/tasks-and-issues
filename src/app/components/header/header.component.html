@@ -12,5 +12,12 @@
       <img src="../../.././assets/icones/dark-mode-black.png" alt="Deixar tema escuro ou claro">
     </div>
     <button (click)="openModal($event)" class="bg-green-primary">create directory</button>
+
+    <div (click)="openToggleColors()" [style.background]="activeColor" class="toggle-colors" title="toggle colors"></div>
+
+    <div class="colors" [ngClass]="{'showColors': showColors}">
+      <div *ngFor="let color of toggleColors" (click)="selectColor(color)" [style.backgroundColor]="color" class="toggle-colors" title="toggle colors">
+      </div>
+    </div>
   </div>
 </header>

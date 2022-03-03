@@ -1,3 +1,5 @@
+@import "../../shared/mixins/mixin.scss";
+
 header {
   width: 100%;
   position: fixed;
@@ -66,6 +68,37 @@ header {
     text-transform: uppercase;
     color: white;
     font-size: 12px;
+  }
+  
+  .toggle-colors {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin-left: 10px;
+    border: 1px solid rgb(131, 131, 131);
+    cursor: pointer;
+  }
+  
+  .colors {
+    width: 100px;
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    justify-content: center;
+    @include shadow();
+    background: white;
+    display: none;
+    flex-wrap: wrap;
+
+    .toggle-colors {
+      margin-left: 0;
+      margin: 5px;
+    }
+  }
+
+  .showColors {
+    display: flex;
   }
 
   @media screen and (max-width: 768px) {
