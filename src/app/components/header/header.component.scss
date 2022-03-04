@@ -85,7 +85,7 @@ header {
     position: absolute;
     right: 10px;
     top: 60px;
-    justify-content: center;
+    justify-content: space-between;
     @include shadow();
     background: white;
     display: none;
