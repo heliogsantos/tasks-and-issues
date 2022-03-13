@@ -51,18 +51,6 @@ input[type="text"], input[type='password'] {
   padding: 0 0 0 10px;
 }
 
-button.btn-primary {
-  background: var(--primary);
-  color: white;
-  border-style: none;
-  font-size: 13px;
-  text-transform: uppercase;
-  cursor: pointer;
-  &:disabled {
-    background: #999999;
-    transition: .3s linear;
-   }
-}
 
 .layer-fill {
   width: 100%;

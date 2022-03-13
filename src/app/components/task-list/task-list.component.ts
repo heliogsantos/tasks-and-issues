@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core'
 
+import { Observable } from 'rxjs';
+
+import { SelectColorService } from '../header/services/select-color.service';
+
 interface TaskList {
   label: string
   done: boolean
@@ -14,9 +18,12 @@ interface TaskList {
 })
 export class TaskListComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private selectColorService: SelectColorService
+  ) { }
 
   newTaskItem = '';
+  bgButton$: Observable<string>
 
   showInputEditTask = ''
 
@@ -89,6 +96,7 @@ export class TaskListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.bgButton$ = this.selectColorService.getColor()
   }
 
 }

@@ -5,7 +5,7 @@
      <form>
       <input [(ngModel)]="user.email" name="email" type="text" placeholder="E-mail">
       <input maxlength="9" [(ngModel)]="user.password" name="password" type="password" placeholder="Password">
-      <button [disabled]="!user.email || user.password.length < 8" class="btn-primary">Sign in</button>
+      <app-button [disabled]="!user.email || user.password.length < 8" bgButton="{{bgButton$ | async}}" [text]="'Sign in'"></app-button>
      </form>
     </div>
   </div>

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Observable } from 'rxjs';
+
 import { ModalService } from 'src/app/services/modal/modal.service';
+import { SelectColorService } from '../header/services/select-color.service';
 import { Directory, Task } from './models/directory.interface';
 
 @Component({
@@ -11,9 +14,13 @@ import { Directory, Task } from './models/directory.interface';
 
 export class CreateDirectoryComponent implements OnInit {
 
-  constructor(private modal: ModalService) { }
+  constructor(
+    private modal: ModalService,
+    private selectColorTreme: SelectColorService 
+  ) { }
 
   fillTasks: string[] = []
+  bgButton$: Observable<string>
 
   directory: Directory = {
     name: '',
@@ -66,5 +73,7 @@ export class CreateDirectoryComponent implements OnInit {
 
   stopPropagationModal = (event: any) => event.stopPropagation()
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.bgButton$ = this.selectColorTreme.getColor()
+  }
 }

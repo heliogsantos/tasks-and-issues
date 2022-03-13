@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Observable } from 'rxjs';
+
+import { SelectColorService } from '../header/services/select-color.service';
+
 interface UserLogin {
   email: string
   password: string
@@ -12,7 +16,11 @@ interface UserLogin {
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private selectColorTreme: SelectColorService 
+  ) { }
+
+  bgButton$: Observable<string>
 
   user: UserLogin = {
     email: '',
@@ -21,5 +29,7 @@ export class LoginComponent implements OnInit {
 
   stopPropagation = (event: Event) => event.stopPropagation()
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.bgButton$ = this.selectColorTreme.getColor()
+  }
 }

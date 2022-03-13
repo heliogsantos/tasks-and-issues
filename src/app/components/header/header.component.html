@@ -11,7 +11,7 @@
     <div class="dark-mode-warper" (click)="handleDarkMode($event)">
       <img src="../../.././assets/icones/dark-mode-black.png" alt="Deixar tema escuro ou claro">
     </div>
-    <button (click)="openModal($event)" class="bg-green-primary">create directory</button>
+    <app-button (click)="openModal($event)" bgButton="{{bgButton$ | async}}" [text]="'Create directory'"></app-button>
 
     <div (click)="openToggleColors()" [style.background]="activeColor" class="toggle-colors" title="toggle colors"></div>
 

@@ -10,6 +10,7 @@ import { MenuService } from './components/menu/services/menu';
 import { TaskListComponent } from './components/task-list/task-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { HeaderModalComponent } from './components/header-modal/header-modal.component';
+import { ButtonComponent } from './shared/components/button/button.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HeaderModalComponent } from './components/header-modal/header-modal.com
     TaskListComponent,
     CreateDirectoryComponent,
     LoginComponent,
-    HeaderModalComponent
+    HeaderModalComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

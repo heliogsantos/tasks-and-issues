@@ -5,12 +5,12 @@
      <form>
       <input [(ngModel)]="directory.name" type="text" name="directory" placeholder="Name directory">
       <input class="newTask" type="text" placeholder="Name task">
-      <button [disabled]="!directory.name.length" (click)="fillFields()" class="btn-primary">Add plus</button>
+      <app-button [disabled]="!directory.name.length" (click)="fillFields()" bgButton="{{bgButton$ | async}}" [text]="'Add plus'"></app-button>
       <input class="newTask" type="text" *ngFor="let task of fillTasks">
      </form>
    </div>
    <div class="modal-footer">
-     <button (click)="createNewDirectory()" class="btn-primary" [disabled]="!directory.name.length">Create</button>
+    <app-button [disabled]="!directory.name.length" (click)="createNewDirectory()" bgButton="{{bgButton$ | async}}" [text]="'Create'"></app-button>
    </div>
   </div>
 </div>

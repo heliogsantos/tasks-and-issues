@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Observable } from 'rxjs';
+
 import { MenuService } from '../menu/services/menu';
 import { DarkModeService } from 'src/app/services/dark-mode/dark-mode.service';
 import { ModalService } from 'src/app/services/modal/modal.service';
@@ -26,6 +28,7 @@ export class HeaderComponent implements OnInit {
   toggleColors: string[] = new Colors().colors
   activeColor: any = '#FFFFFF'
   showColors = false
+  bgButton$: Observable<string>
 
   openMenu = (e: any) => {
     const showMenu = true
@@ -70,5 +73,7 @@ export class HeaderComponent implements OnInit {
         this.activeColor = localStorage.getItem('save-color')
       }
     })
+
+    this.bgButton$ = this.selectColorTreme.getColor()
   }
 }
