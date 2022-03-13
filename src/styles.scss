@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Fira Code', monospace;
 }
 
 body {
@@ -41,7 +41,7 @@ body {
   @include transitionDarkMode;
 }
 
-input[type="text"] {
+input[type="text"], input[type='password'] {
   border-style: none;
   outline: none;
   font-weight: 300;

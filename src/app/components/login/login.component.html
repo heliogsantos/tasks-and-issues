@@ -1,0 +1,12 @@
+<div class="layer-fill">
+  <div class="modal-default" (click)="stopPropagation($event)">
+    <app-header-modal [title]="'Login'"></app-header-modal>
+    <div class="body-login">
+     <form>
+      <input [(ngModel)]="user.email" name="email" type="text" placeholder="E-mail">
+      <input maxlength="9" [(ngModel)]="user.password" name="password" type="password" placeholder="Password">
+      <button [disabled]="!user.email || user.password.length < 8" class="btn-primary">Sign in</button>
+     </form>
+    </div>
+  </div>
+</div>

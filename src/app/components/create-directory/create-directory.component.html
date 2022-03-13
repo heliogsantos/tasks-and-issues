@@ -1,9 +1,6 @@
 <div class="layer-fill">
   <div class="modal-default" (click)="stopPropagationModal($event)">
-    <div class="modal-header">
-      <h3>Add new directory</h3>
-      <span (click)="close()">X</span>
-    </div>
+    <app-header-modal [title]="'Add new directory'"></app-header-modal>
    <div class="modal-body">
      <form>
       <input [(ngModel)]="directory.name" type="text" name="directory" placeholder="Name directory">

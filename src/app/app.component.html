@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tasks</title>
 </head>
-<body [style.backgroundColor]="activeColor" [ngClass]="{'dark-mode': asDarkMode}" (click)="closeMenu($event)">
+<body [style.backgroundColor]="activeColor" [ngClass]="{'dark-mode': asDarkMode}" (click)="closeMenu()">
   <app-header></app-header>
   <app-menu></app-menu>
   <app-task-list></app-task-list>
   <app-modal *ngIf="addNewTask"></app-modal>
+  <app-login *ngIf="openModalLogin && !addNewTask"></app-login>
 </body>
 </html>

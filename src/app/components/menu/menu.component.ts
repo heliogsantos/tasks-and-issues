@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { DarkModeService } from 'src/app/services/dark-mode/dark-mode.service';
+import { LoginService } from 'src/app/services/login/login.service';
 import { MenuService } from './services/menu';
 
 interface Task {
@@ -18,7 +19,8 @@ export class MenuComponent implements OnInit {
 
   constructor(
     private menuService: MenuService,
-    private darkMode: DarkModeService
+    private darkMode: DarkModeService,
+    private logon: LoginService
   ) { }
 
   showMenu = false
@@ -57,6 +59,11 @@ export class MenuComponent implements OnInit {
   openSubTasks = (task: Task) => {
     this.closeSubTasks()
     task.open = true
+  }
+
+  openModalLogin = () => {
+    this.closeNaveBar()
+    this.logon.setShowLogin(true)
   }
 
 

@@ -1,6 +1,6 @@
 <nav [ngClass]="{'showMenu': !showMenu, 'dark-mode-primary': asDarkMode}" (click)="stopPropagationNavigation($event)">
   <div class="header">
-    <p>login</p>
+    <p (click)="openModalLogin()">login</p>
     <div class="close" (click)="closeNaveBar()">X</div>
   </div>
 

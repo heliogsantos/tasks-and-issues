@@ -4,6 +4,7 @@ import { MenuService } from './components/menu/services/menu';
 import { DarkModeService } from './services/dark-mode/dark-mode.service';
 import { ModalService } from './services/modal/modal.service';
 import { SelectColorService } from './components/header/services/select-color.service';
+import { LoginService } from './services/login/login.service';
 
 @Component({
   selector: 'app-root',
@@ -16,17 +17,20 @@ export class AppComponent implements OnInit {
     private menuService: MenuService,
     private darkMode: DarkModeService,
     private modal: ModalService,
-    private selectColor: SelectColorService
+    private selectColor: SelectColorService,
+    private login: LoginService
   ) {}
 
   asDarkMode = false
   addNewTask = false
   activeColor: string
+  openModalLogin = false
 
-  closeMenu = (e: any) => {
-    const closeMenu = false
-    this.menuService.setMenuToggle(closeMenu)
-    this.modal.setShowModal(false)
+  closeMenu = () => {
+    const HIDE = false
+    this.menuService.setMenuToggle(HIDE)
+    this.modal.setShowModal(HIDE)
+    this.login.setShowLogin(HIDE)
   }
 
   ngOnInit(): void {
@@ -35,5 +39,7 @@ export class AppComponent implements OnInit {
     this.modal.getModalValue().subscribe(props => this.addNewTask = props)
 
     this.selectColor.getColor().subscribe(props => this.activeColor = props)
+
+    this.login.getShowLogin().subscribe(props => this.openModalLogin = props)
   }
 }

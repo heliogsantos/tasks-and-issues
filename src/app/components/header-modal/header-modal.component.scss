@@ -1,0 +1,15 @@
+.modal-header {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  span {
+    cursor: pointer;
+    font-weight: 900;
+  }
+  h3 {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 900;
+  }
+}
